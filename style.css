@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #93cb52;
+    --secondary-color: #333;
+    --light-color: #f4f4f4;
+    --dark-primary-color: #7ab436;
+    --text-white: #fff;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: var(--text-white);
+}
+.text-primary{
+    color: var(--primary-color);
+}
+.text-center{
+    text-align: center;
+}
+.m-heading{
+    font-size: 2rem;
+}
+.btn{
+    display: inline-block;
+    padding: 0.5rem 1.7rem;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+a[href="#what"]:hover{
+    background-color: var(--dark-primary-color);
+}
+/* .overlay{
+    
+    min-height: 100vh;
+} */
+/* Navbar */
+#navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+    flex-direction: column;
+}
+.overlay{
+    width: 100%;
+    background-color: #000;
+    opacity: 0.8;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.logo h1{
+    margin-bottom: 0.7rem;
+    position: relative;
+    z-index: 10;
+}
+i ~ span{
+    color: var(--text-white);
+}
+.nav-links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    list-style: none;
+    z-index: 10;
+}
+.nav-links a{
+    padding: 1rem 0.8rem;
+}
+.nav-links a:hover{
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+/* Header */
+header{
+    min-height: 100vh;
+    background: var(--secondary-color) url('./img/showcase.jpg') no-repeat center/cover;
+}
+header .content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    top: 124px;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--text-white);
+}
+.l-heading{
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+}
+.lead{
+    width: 80%;
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
+
+/* What we do section */
+#what{
+    background: var(--light-color);
+    padding: 2rem;
+}
+#what .items{
+display: block;
+margin: 2rem auto;
+}
+#what .items .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+#what .items .item div{
+    width: 70%;
+    color: var(--secondary-color);
+}
+#what .items .item i{
+    padding: 0.8rem;
+    border-radius: 100%;
+    background-color: var(--primary-color);
+}
+
+/* Who we are */
+#who{
+    background: var(--secondary-color);
+    color: var(--text-white);
+    display: flex;
+}
+.who-img{
+    background: url('./img/people.jpg') no-repeat center center/cover;
+    flex: 50%;
+    display: none;
+}
+.who-text{
+    flex: 50%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#who .list{
+    list-style: none;
+}
+#who .list li{
+    padding: 0.7rem 0;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.178);
+}
+
+
+@media (min-width: 768px){
+    #navbar{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav-links{
+        justify-content: flex-end;
+        padding-right: 1rem;
+    }
+    header .content{
+        top: 83px;
+    }
+    .logo h1{
+        padding-left: 1rem;
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+    }
+    #what .items{
+        display: flex;
+        width: 90%;
+    }
+    #what .items .item{
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    #what .items .item div{
+        width: 90%;
+        text-align: center;
+    }
+    .who-img{
+        display: block;
+    }
+}
+
+@media (min-width: 991px){
+    #what .items{
+        width: 100%;
+        max-width: 1100px;
+        }
+    #what .items .item{
+        flex-direction: row;
+    }
+    #what .items{
+        gap: 0.5rem;
+    }
+    #what .items .item div{
+        text-align: left;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
