@@ -91,6 +91,7 @@ i ~ span{
 
 /* Header */
 header{
+    position: relative;
     height: 100vh;
     background: var(--secondary-color) url('./img/showcase.jpg') no-repeat center/cover;
 }
@@ -192,6 +193,7 @@ margin: 2rem auto;
 #clients .items{
     display: flex;
     margin: 2rem auto;
+    max-width: 1100px;
     gap: 2rem;
     justify-content: space-between;
 }
@@ -224,7 +226,7 @@ margin: 2rem auto;
     .container{
         width: 100%;
     }
-    #what .items{
+    #what .items, #clients .items{
         display: flex;
         width: 90%;
     }
@@ -246,7 +248,7 @@ margin: 2rem auto;
 }
 
 @media (min-width: 991px){
-    #what .items, #clients .items{
+    #what .items{
         width: 100%;
         max-width: 1100px;
         }
