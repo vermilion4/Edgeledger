@@ -35,6 +35,10 @@ img{
     background-color: var(--primary-color);
     color: var(--text-white)
 }
+.bg-dark{
+    background-color: var(--secondary-color);
+    color: var(--text-white)
+}
 .container{
     width: 80%;
     margin: 0 auto;
@@ -234,8 +238,12 @@ input, textarea{
 }
 .map{
     display: none;
-    background-color: red;
     width: 100%;
+}
+
+/* Footer */
+#main-footer{
+    padding: 2rem;
 }
 
 /* Media Queries */
